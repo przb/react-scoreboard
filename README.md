@@ -73,12 +73,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Organization
 Objects I could use:
     - Player
-    - Scoreboard
-    - Cell
-    - Row
-    - Column
-    - Round
+    - Scoreboard extends react component
+    - Cell extends react component
+    - Column extends react component
+    - Round 
     - Game
+    - Gameboard extends react component
 
 This is what i will need:
     - A way to store the scores of the player
