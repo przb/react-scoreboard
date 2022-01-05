@@ -7,45 +7,70 @@ const PLAYERS = 4;
 const ROUNDS = 10;
 const CURRENT_ROUND = 0;
 
+class Scorer extends React.Component {
+    render() {
+        return (
+            <div>
+                <input type="text" placeholder="Test" />
+            </div>
+        );
+    }
+}
+
 class Player extends React.Component {
     constructor(props) {
         super(props);
-        this.status = {
+        this.state = {
+            playerName: "Test",
             totalScore: 0,
-            pastScores: Array(ROUNDS).fill(0),
+            pastScores: Array(ROUNDS).fill(null),
         }
     }
-    
+
     handleRound() {
-        const score = handleScore(); // TODO Make the score equal a text box
-        this.status.pastScores[CURRENT_ROUND] = score;
+        // const score = handleScore(); // TODO Make the score equal a text box
+        // this.state.pastScores[CURRENT_ROUND] = score;
     }
-    
+
     handleScore() { }
-    
-    render() { }
+
+    render() { return (<div><h1>{this.state.playerName}</h1><h2>{this.state.totalScore}</h2></div>); }
 }
 
 class Board extends React.Component {
-
-    render() { };
-}
-
-class Game extends React.Component {
     constructor(props, numPlayers, numRounds) {
         super(props);
         this.status = {
             players: Array(numPlayers).fill(null),
+            scorers: Array(numPlayers).fill(null),
             rounds: numRounds,
         };
     }
+
     nextRound() {
         for (let i = 0; i < this.status.players.length; i++) {
             this.status.players[i].handleRound();
         }
     }
 
-    render() { }
+    renderScorers() { }
+    renderPlayers() { }
+
+    render() {
+        return (
+            < div >
+                <Player />
+                <Scorer />
+            </div >
+        );
+    }
+}
+
+class Game extends React.Component {
+
+    render() {
+        return <Board />;
+    }
 }
 
 ReactDOM.render(

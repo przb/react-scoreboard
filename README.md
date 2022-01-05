@@ -75,8 +75,7 @@ Objects I could use:
     - Player
     - Scoreboard extends react component
     - Cell extends react component
-    - Column extends react component
-    - Round 
+    - Column extends react component 
     - Game
     - Gameboard extends react component
 
