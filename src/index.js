@@ -9,12 +9,21 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cells: Array(ROUNDS * PLAYERS).fill(null),
+            rows: Array(ROUNDS).fill(null),
         }
     }
 
+    onScore(){
+
+    }
+
     renderRow(i) {
-        return <Row />;
+        return (
+            <div>
+                <Row value={this.state.cells[i]}/>
+
+            </div>
+        );
     }
 
     renderCell(i) {
@@ -25,7 +34,18 @@ class Board extends React.Component {
 
     render() {
         return (
-           this.state.cells[1]; 
+            <div>
+                {this.renderRow(0)} 
+                {this.renderRow(1)} 
+                {this.renderRow(2)} 
+                {this.renderRow(3)} 
+                {this.renderRow(4)} 
+                {this.renderRow(5)} 
+                {this.renderRow(6)} 
+                {this.renderRow(7)} 
+                {this.renderRow(8)} 
+                {this.renderRow(9)} 
+            </div>
         );
     }
 }
