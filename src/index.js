@@ -2,30 +2,38 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+const PLAYERS = 4;
+const ROUNDS = 10;
+
 class Board extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            cells: Array(10).fill(Array(3).fill(4)),
-        }
-        for (let i = 0; i < this.state.cells.length; i++){
-            this.state.cells[i] = <Cell id={i}/>;
+        this.state = {
+            cells: Array(ROUNDS * PLAYERS).fill(null),
         }
     }
 
-    renderRow(props){
-        return ;
+    renderRow(i) {
+        return <Row />;
+    }
+
+    renderCell(i) {
+        return (
+            <Cell value={this.state.cells[i]} />
+        );
     }
 
     render() {
-        return this.state.cells;
+        return (
+           this.state.cells[1]; 
+        );
     }
 }
 
-function Row(props){
+function Row(props) {
     return (
         <div>
-            {props.state.cell}
+            {props.state.cells}
         </div>
     );
 }
@@ -33,9 +41,7 @@ function Row(props){
 function Cell(props) {
     return (
         <div>
-            <input type="text" className="cell" onClick={props.onClick} placeholder='Test'>
-                
-            </input>
+            <input type="text" className="cell" onClick={props.onClick} placeholder='Test' />
         </div>
     );
 }
