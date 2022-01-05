@@ -74,6 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Objects I could use:
     - Player
     - Scoreboard
+    - Cell
     - Row
     - Column
     - Round
