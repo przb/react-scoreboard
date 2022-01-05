@@ -6,7 +6,7 @@ class Board extends React.Component {
     constructor(props){
         super(props);
         this.state={
-            cells: Array(10).fill(Array.fill(4)),
+            cells: Array(10).fill(Array(3).fill(4)),
         }
         for (let i = 0; i < this.state.cells.length; i++){
             this.state.cells[i] = <Cell id={i}/>;
@@ -16,6 +16,7 @@ class Board extends React.Component {
     renderRow(props){
         return ;
     }
+
     render() {
         return this.state.cells;
     }
@@ -32,10 +33,8 @@ function Row(props){
 function Cell(props) {
     return (
         <div>
-            <label>Text Input</label>
-            
-            <input type="text" className="cell" onClick={props.onClick} cd>
-                {props.value}
+            <input type="text" className="cell" onClick={props.onClick} placeholder='Test'>
+                
             </input>
         </div>
     );
