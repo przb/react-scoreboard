@@ -23,6 +23,20 @@ class Player {
     handleScore() { }
 }
 
+class Game{
+    constructor(numPlayers, numRounds){
+        this.status = {
+            players: numPlayers,
+            rounds: numRounds,
+        }
+    }
+    nextRound(){
+        for (let i = 0; i < this.status.players.length; i++){
+            this.status.players[i].handleRound(); 
+        }
+    }
+}
+
 class Board extends React.Component {
 
     render() { };
