@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Organization
+Objects I could use:
+    - Player
+    - Scoreboard
+    - Row
+    - Column
+    - Round
+    - Game
+
+This is what i will need:
+    - A way to store the scores of the player
+    - A way to store the score 
+    - A way to input the score
+    - A way to display the score from the past
+    - A way to total the scores
+    - A way to organize the scores 
