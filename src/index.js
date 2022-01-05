@@ -7,34 +7,23 @@ const PLAYERS = 4;
 const ROUNDS = 10;
 const CURRENT_ROUND = 0;
 
-class Player {
-    constructor() {
+class Player extends React.Component {
+    constructor(props) {
+        super(props);
         this.status = {
             totalScore: 0,
             pastScores: Array(ROUNDS).fill(0),
         }
     }
-
+    
     handleRound() {
         const score = handleScore(); // TODO Make the score equal a text box
         this.status.pastScores[CURRENT_ROUND] = score;
     }
-
+    
     handleScore() { }
-}
-
-class Game{
-    constructor(numPlayers, numRounds){
-        this.status = {
-            players: numPlayers,
-            rounds: numRounds,
-        }
-    }
-    nextRound(){
-        for (let i = 0; i < this.status.players.length; i++){
-            this.status.players[i].handleRound(); 
-        }
-    }
+    
+    render() { }
 }
 
 class Board extends React.Component {
@@ -43,6 +32,19 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
+    constructor(props, numPlayers, numRounds) {
+        super(props);
+        this.status = {
+            players: Array(numPlayers).fill(null),
+            rounds: numRounds,
+        };
+    }
+    nextRound() {
+        for (let i = 0; i < this.status.players.length; i++) {
+            this.status.players[i].handleRound();
+        }
+    }
+
     render() { }
 }
 
