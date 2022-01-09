@@ -17,13 +17,29 @@ class Scorer extends React.Component {
     }
 }
 
+class PastScores extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            scores: [2, 3, 4, 5, 16, 0, 12, 66, 3],
+        }
+    }
+    render() {
+        return (
+            <div>
+
+            </div>
+        )
+    }
+}
+
 class Player extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             playerName: "Test",
             totalScore: 0,
-            pastScores: Array(ROUNDS).fill(null),
+
         }
     }
 
@@ -34,7 +50,14 @@ class Player extends React.Component {
 
     handleScore() { }
 
-    render() { return (<div><h1>{this.state.playerName}</h1><h2>{this.state.totalScore}</h2></div>); }
+    render() {
+        return (
+            <div>
+                <h1>{this.state.playerName}</h1>
+                <h2>{this.state.totalScore}</h2>
+            </div>
+        );
+    }
 }
 
 class Board extends React.Component {
@@ -66,10 +89,26 @@ class Board extends React.Component {
     }
 }
 
+class GameUtils extends React.Component {
+    render() {
+        return (
+            <div>
+                <input type="text" placeholder="Test" />
+                <button className="" onclick="">button</button>
+            </div>
+        );
+    }
+}
+
 class Game extends React.Component {
 
     render() {
-        return <Board />;
+        return (
+            <div>
+                <Board />
+                <GameUtils />
+            </div>
+        );
     }
 }
 
