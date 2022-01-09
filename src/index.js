@@ -81,10 +81,10 @@ class Board extends React.Component {
 
     render() {
         return (
-            < div >
+            <div class="Game">
                 <Player />
                 <Scorer />
-            </div >
+            </div>
         );
     }
 }
@@ -92,9 +92,10 @@ class Board extends React.Component {
 class GameUtils extends React.Component {
     render() {
         return (
-            <div>
+            <div class="GameUtils">
+                <h1>Name</h1>
                 <input type="text" placeholder="Test" />
-                <button className="" onclick="">button</button>
+                <button className="" onclick="">Add Player</button>
             </div>
         );
     }
