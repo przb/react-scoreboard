@@ -2,7 +2,7 @@ input.cell{
     width: 40px;
 }
 
-div.Game{
+div.Board{
     height: 300px;
     width: 70%;
     background-color: orange;
@@ -18,4 +18,8 @@ div.GameUtils{
     text-align: center;
     border-radius: 6px;
     border: solid black 4px;
+}
+
+div.Game{
+    
 }

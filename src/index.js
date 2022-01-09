@@ -81,7 +81,7 @@ class Board extends React.Component {
 
     render() {
         return (
-            <div class="Game">
+            <div class="Board">
                 <Player />
                 <Scorer />
             </div>
@@ -105,7 +105,7 @@ class Game extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class="Game">
                 <Board />
                 <GameUtils />
             </div>
