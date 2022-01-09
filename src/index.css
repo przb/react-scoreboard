@@ -1,3 +1,19 @@
 input.cell{
     width: 40px;
 }
+
+div.Game{
+    height: 300px;
+    width: 80%;
+    background-color: orange;
+    float: left;
+    text-align: center;
+}
+
+div.GameUtils{
+    height: 300px;
+    width: 20%;
+    background-color: cyan;
+    float: right;
+    text-align: center;
+}
