@@ -3,16 +3,18 @@ input.cell{
 }
 
 div.Board{
+    padding: 50px;
     height: 300px;
-    width: 70%;
+    
     background-color: orange;
     float: left;
     text-align: center;
 }
 
 div.GameUtils{
+    padding: 50px;
     height: 300px;
-    width: 20%;
+    
     background-color: cyan;
     float: right;
     text-align: center;
@@ -21,5 +23,9 @@ div.GameUtils{
 }
 
 div.Game{
-    
+    height: 400px;
+    width: 90%;
+    background-color: red;
+    float: center;
+    text-align: center;
 }
