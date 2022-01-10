@@ -105,10 +105,12 @@ class Game extends React.Component {
 
     render() {
         return (
-            <div class="Game">
-                <Board />
-                <GameUtils />
-            </div>
+            <center>
+                <div class="Game">
+                    <Board />
+                    <GameUtils />
+                </div>
+            </center>
         );
     }
 }
