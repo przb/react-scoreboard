@@ -21,6 +21,10 @@ class Player extends React.Component {
 
     }
 
+    handleChange = event => {
+        this.setState({totalScore:event.target.value});
+    }
+
     handleRound() {
         // const score = handleScore(); // TODO Make the score equal a text box
         // this.state.pastScores[CURRENT_ROUND] = score;
@@ -33,7 +37,7 @@ class Player extends React.Component {
             <div>
                 <h1>{this.state.playerName}</h1>
                 <h2>{this.state.totalScore}</h2>
-                <input type="text" placeholder="Test" />
+                <input type="text" placeholder="Test" onChange={this.handleChange}/>
             </div>
         );
     }
@@ -81,10 +85,10 @@ class Board extends React.Component {
 class GameUtils extends React.Component {
     render() {
         return (
-            <div class="GameUtils">
+            <div className="GameUtils">
                 <h1>Name</h1>
                 <input type="text" placeholder="Test" />
-                <button className="" onclick="">Add Player</button>
+                <button className="" onClick="">Add Player</button>
             </div>
         );
     }
@@ -95,7 +99,7 @@ class Game extends React.Component {
     render() {
         return (
             <center>
-                <div class="Game">
+                <div className="Game">
                     <Board />
                     <GameUtils />
                 </div>
