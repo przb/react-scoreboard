@@ -5,7 +5,7 @@ input.cell{
 div.Board{
     padding: 50px;
     height: 300px;
-    
+    width: max-content;
     background-color: orange;
     float: left;
     text-align: center;
@@ -14,18 +14,18 @@ div.Board{
 div.GameUtils{
     padding: 50px;
     height: 300px;
-    
+    width: min-content;
     background-color: cyan;
     float: right;
     text-align: center;
-    border-radius: 6px;
-    border: solid black 4px;
 }
 
 div.Game{
     height: 400px;
-    width: 90%;
-    background-color: red;
+    width: fit-content;
     float: center;
     text-align: center;
+    background-color: red;
+    border-radius: 6px;
+    border: solid black 4px;
 }
