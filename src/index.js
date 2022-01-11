@@ -7,18 +7,6 @@ const PLAYERS = 4;
 const ROUNDS = 10;
 const CURRENT_ROUND = 0;
 
-class Scorer extends React.Component {
-    render() {
-        return (
-            <div>
-                <input type="text" placeholder="Test" />
-            </div>
-        );
-    }
-}
-
-
-
 class Player extends React.Component {
     constructor(props) {
         super(props);
@@ -41,6 +29,7 @@ class Player extends React.Component {
             <div>
                 <h1>{this.state.playerName}</h1>
                 <h2>{this.state.totalScore}</h2>
+                <input type="text" placeholder="Test" />
             </div>
         );
     }
@@ -69,7 +58,6 @@ class Board extends React.Component {
         return (
             <div class="Board">
                 <Player />
-                <Scorer />
             </div>
         );
     }
