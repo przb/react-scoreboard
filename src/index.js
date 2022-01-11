@@ -11,10 +11,14 @@ class Player extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            playerName: "Test",
             totalScore: 0,
 
         }
+    }
+
+    setPlayerName(givenName) {
+        this.state.playerName = givenName;
+
     }
 
     handleRound() {
@@ -37,7 +41,7 @@ class Player extends React.Component {
 
 class Board extends React.Component {
     constructor(props, numPlayers, numRounds) {
-        super(props);
+        super(props); //TODO figure out how to use multiple props from constructor
         this.status = {
             players: Array(numPlayers).fill(null),
             scorers: Array(numPlayers).fill(null),
@@ -51,13 +55,24 @@ class Board extends React.Component {
         }
     }
 
-    renderScorers() { }
-    renderPlayers() { }
+    renderPlayer(i) {
+        return (
+            <Player value={this.status.players[i]} />
+        );
+    }
+
+    renderPlayers() {
+        let playerHtml = this.renderPlayer(0);
+        for (let i = 1; i < this.status.players.length; i++) {
+            playerHtml += this.renderPlayer(i);
+        }
+        return playerHtml;
+    }
 
     render() {
         return (
             <div class="Board">
-                <Player />
+                {this.renderPlayers()}
             </div>
         );
     }
