@@ -17,21 +17,7 @@ class Scorer extends React.Component {
     }
 }
 
-class PastScores extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            scores: [2, 3, 4, 5, 16, 0, 12, 66, 3],
-        }
-    }
-    render() {
-        return (
-            <div>
 
-            </div>
-        )
-    }
-}
 
 class Player extends React.Component {
     constructor(props) {
