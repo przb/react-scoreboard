@@ -1,21 +1,7 @@
-# Organization
-Objects I could use:
-- Player
-- Scoreboard extends react component
-- Cell extends react component
-- Column extends react component
-- Round 
-- Game
-- Gameboard extends react component
+# ***This is very much a work in progress and just for my own learning's sake***
 
-This is what i will need:
-- A way to store the scores of the player
-- A way to store the score 
-- A way to input the score
-- A way to display the score from the past
-- A way to total the scores
-- A way to organize the scores 
-
+# Default react readme:
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -86,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
